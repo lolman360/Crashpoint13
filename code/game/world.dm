@@ -254,9 +254,9 @@ GLOBAL_PROTECT(security_mode)
 		hostedby = CONFIG_GET(string/hostedby)
 
 	s += "<b>\[ENG] Fallout 13 \[18+]<br>"
-	s += "An 18+ HRP server based around 2280. F2/F:NV.<br>"
-	s += "Heavy RP \[https://discord.gg/vGbtpvq]<br>"
-	s += "Hosted by: Carl"
+	s += "An 18+ MRP to HRP server based around 2280. F2/F:NV.<br>"
+	s += "Heavy RP \[https://discord.gg/citadelstation]<br>"
+	s += "Hosted by: CitadelBot"
 
 	var/n = 0
 	for (var/mob/M in GLOB.player_list)
