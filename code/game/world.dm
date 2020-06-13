@@ -254,7 +254,7 @@ GLOBAL_PROTECT(security_mode)
 		hostedby = CONFIG_GET(string/hostedby)
 
 	s += "<b>\[ENG] Fallout 13 \[18+]<br>"
-	s += "An 18+ MRP to HRP server based around 2280. F2/F:NV.<br>"
+	s += "A Fallout style server based around the timeline of FO:NV.<br>"
 	s += "Heavy RP \[https://discord.gg/citadelstation]<br>"
 	s += "Hosted by: CitadelBot"
 
