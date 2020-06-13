@@ -255,7 +255,7 @@ GLOBAL_PROTECT(security_mode)
 
 	s += "<b>\[ENG] Fallout 13 \[18+]<br>"
 	s += "A Fallout style server based around the timeline of FO:NV.<br>"
-	s += "Heavy RP \[https://discord.gg/citadelstation]<br>"
+	s += "Discord: \[https://discord.gg/citadelstation]<br>"
 	s += "Hosted by: CitadelBot"
 
 	var/n = 0
