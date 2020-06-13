@@ -1,3 +1,6 @@
+# Line ending standardization
+* text=auto
+
 # merger hooks, run tools/hooks/install.bat or install.sh to set up
 *.dmm merge=dmm
 *.dmi merge=dmi
