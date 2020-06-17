@@ -25,9 +25,14 @@
 	var/list/autogrant_actions_controller	//assoc list "[bitflag]" = list(typepaths)
 	var/list/mob/occupant_actions			//assoc list mob = list(type = action datum assigned to mob)
 	var/obj/vehicle/trailer
+	var/fueltype //what fuel do we use if we use fuel. if we don't use fuel this is null.
+	var/fueluse //how much fuel is consumed on a move proc
+	var/tanksize //size of the fuel tank
 
 /obj/vehicle/Initialize(mapload)
 	. = ..()
+	if(fueltype && fueluse && tanksize)
+		create_reagents(tanksize) //fuel tank
 	occupants = list()
 	autogrant_actions_passenger = list()
 	autogrant_actions_controller = list()
@@ -106,9 +111,15 @@
 		return FALSE
 	if(!default_driver_move)
 		return
+	if(fueltype && fueluse)
+		if(reagents.get_reagent_amount(fueltype) < fueluse)
+			to_chat(user, "<span class='warning'>[src]'s engine sputters!</span>")
+			return
 	vehicle_move(direction)
 
 /obj/vehicle/proc/vehicle_move(direction)
+	if(fueltype && fueluse)
+		reagents.remove_reagent("fueltype", fueluse)
 	if(lastmove + movedelay > world.time)
 		return FALSE
 	lastmove = world.time

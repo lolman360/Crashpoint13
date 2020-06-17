@@ -178,3 +178,11 @@
 	materials = list(MAT_BIOMASS = 5)
 	build_path = /obj/item/stack/tile/carpet
 	category = list("initial","Misc")
+
+/datum/design/biodiesel
+	name = "Biodiesel"
+	id = "biodiesel"
+	build_type = BIOGENERATOR
+	materials = list(MAT_BIOMASS = 100)
+	make_reagents = list("biodiesel" = 10)
+	category = list("initial","Misc")

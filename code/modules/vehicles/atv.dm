@@ -5,6 +5,9 @@
 	icon_state = "atv"
 	key_type = /obj/item/key
 	var/static/mutable_appearance/atvcover
+	fueltype = "biodiesel"
+	fueluse = 0.25
+	tanksize = 100 //400 tiles movement on a single tank. 1k biomass needed to fill the tank.
 
 /obj/vehicle/ridden/atv/Initialize()
 	. = ..()
