@@ -29,16 +29,14 @@
 	set name = "rules"
 	set desc = "Show Server Rules."
 	set hidden = 1
-//	var/rulesurl = CONFIG_GET(string/rulesurl)
-	switch(alert("Would you like to see the rules?", null, "View here", "Cancel"))
-/*		if("Discord (external link)")
-			if(!rulesurl)
-				to_chat(src, "<span class='danger'>The rules URL is not set in the server configuration.</span>")
-				return
-			src << link(rulesurl)*/
-		if("View here")
-			src << browse('html/rules.html', "window=changes")
-
+	var/rulesurl = CONFIG_GET(string/rulesurl)
+	if(rulesurl)
+		if(alert("This will open the rules page in your browser. Are you sure?",,"Yes","No")!="Yes")
+			return
+		src << link(rulesurl)
+	else
+		to_chat(src, "<span class='danger'>The rules URL is not set in the server configuration.</span>")
+	return
 
 /client/verb/github()
 	set name = "github"
