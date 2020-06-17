@@ -1743,3 +1743,8 @@
 	M.adjustToxLoss(0.5*REM, 0)
 	. = 1
 	..()
+
+/datum/reagent/fuel/biodiesel
+	name = "biodiesel"
+	id = "biodiesel"
+	description = "A measure of liquid biodiesel, good for running vehicles such as ATVs."
