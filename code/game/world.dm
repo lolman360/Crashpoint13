@@ -253,7 +253,7 @@ GLOBAL_PROTECT(security_mode)
 			features += "vote"
 		hostedby = CONFIG_GET(string/hostedby)
 
-	s += "<b>\[ENG] Fallout 13 \[18+]<br>"
+	s += "<b>\[ENG] Fallout 13 \<br>"
 	s += "A Fallout style server based around the timeline of FO:NV.<br>"
 	s += "Discord: \[https://discord.gg/citadelstation]<br>"
 	s += "Hosted by: CitadelBot"
